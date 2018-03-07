@@ -18,7 +18,7 @@
       <ToggleButton fx:id="toggleButton3" layoutX="60.0" layoutY="413.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="78.0" text="air resistance" />
       <TextField fx:id="textField1" layoutX="60.0" layoutY="255.0" prefHeight="23.0" prefWidth="78.0" text="initial speed" />
       <TextField fx:id="textField2" layoutX="60.0" layoutY="291.0" prefHeight="23.0" prefWidth="78.0" text="angle" />
-      <LineChart layoutX="206.0" layoutY="85.0" prefHeight="459.0" prefWidth="669.0">
+      <LineChart fx:id="lineChart" layoutX="206.0" layoutY="85.0" prefHeight="459.0" prefWidth="669.0" title="График">
         <xAxis>
           <CategoryAxis side="BOTTOM" />
         </xAxis>
