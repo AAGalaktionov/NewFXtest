@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.web.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<Pane fx:controller="sample.Controller"
+        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Button fx:id="button" layoutX="75.0" layoutY="497.0" mnemonicParsing="false" text="Draw" ></Button>
+      <ToggleButton fx:id="toggleButton1" layoutX="60.0" layoutY="333.0" mnemonicParsing="false" text="analytically" />
+      <ToggleButton fx:id="toggleButton2" layoutX="60.0" layoutY="373.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="78.0" text="numerical" />
+      <ToggleButton fx:id="toggleButton3" layoutX="60.0" layoutY="413.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="78.0" text="air resistance" />
+      <TextField fx:id="textField1" layoutX="60.0" layoutY="255.0" prefHeight="23.0" prefWidth="78.0" text="initial speed" />
+      <TextField fx:id="textField2" layoutX="60.0" layoutY="291.0" prefHeight="23.0" prefWidth="78.0" text="angle" />
+      <LineChart layoutX="206.0" layoutY="85.0" prefHeight="459.0" prefWidth="669.0">
+        <xAxis>
+          <CategoryAxis side="BOTTOM" />
+        </xAxis>
+        <yAxis>
+          <NumberAxis side="LEFT" />
+        </yAxis>
+      </LineChart>
+   </children>
+</Pane>
