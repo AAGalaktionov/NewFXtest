@@ -24,10 +24,16 @@ public class Controller {
     @FXML
     public void initialize() {
         button.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
-            InputText inputText = new InputText(Double.valueOf(textField2.getText()), Double.valueOf(textField1.getText()));
-            System.out.println(inputText.getAngle() + " " + inputText.getSpeed());
+            try {
+                InputText inputText = new InputText(Double.valueOf(textField2.getText()), Double.valueOf(textField1.getText()));
+                System.out.println(inputText.getAngle() + " " + inputText.getSpeed());
+            } catch (NumberFormatException e) {
+                System.out.println("Некоректные входные данные!!!");
+            }
+            //Очистка нужна, если нажмут на кнопку несколько раз
+            lineChart.getData().clear();
 
-            //По нажатию рисуем линии тестовый убогий код
+            //По нажатию рисуем линии, тестовый убогий код писать подругому, это для понимания
             HashMap<Double, Double> line1 = new HashMap<>();
             HashMap<Double, Double> line2 = new HashMap<>();
             for (int i = 0; i < 11; i++) {
