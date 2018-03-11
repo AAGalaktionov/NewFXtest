@@ -8,6 +8,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.input.MouseEvent;
 
 import java.util.HashMap;
+import java.util.Random;
 
 public class Controller {
 
@@ -30,26 +31,26 @@ public class Controller {
             } catch (NumberFormatException e) {
                 System.out.println("Некоректные входные данные!!!");
             }
-            //Очистка нужна, если нажмут на кнопку несколько раз
+            //Очистка нужна, если нажмут на кнопку несколько раз, попробуй)))
             lineChart.getData().clear();
 
             //По нажатию рисуем линии, тестовый убогий код писать подругому, это для понимания
             HashMap<Double, Double> line1 = new HashMap<>();
             HashMap<Double, Double> line2 = new HashMap<>();
             for (int i = 0; i < 11; i++) {
-                line1.put(1.0 * i, 1.0 * i + i + 1);
-                line2.put(1.0 * i, 2.0 * i + i + 2);
+                Random random = new Random();
+                double rand = random.nextDouble();
+                line1.put(rand * i, rand * i + i + 1);
+                line2.put(rand * i, 2.0 * rand * i + 2);
             }
+
+
             XYChart.Series seriesForLine1 = new XYChart.Series();
             seriesForLine1.setName("Line one");
-            for (HashMap.Entry<Double, Double> entry : line1.entrySet()) {
-                seriesForLine1.getData().add(new XYChart.Data(entry.getKey().toString(), entry.getValue()));
-            }
+            line1.entrySet().forEach(p -> seriesForLine1.getData().add(new XYChart.Data(p.getKey().toString(), p.getValue())));
             XYChart.Series seriesForLine2 = new XYChart.Series();
             seriesForLine2.setName("Line two");
-            for (HashMap.Entry<Double, Double> entry : line2.entrySet()) {
-                seriesForLine2.getData().add(new XYChart.Data(entry.getKey().toString(), entry.getValue()));
-            }
+            line2.entrySet().forEach(p -> seriesForLine2.getData().add(new XYChart.Data(p.getKey().toString(), p.getValue())));
 
             lineChart.getData().addAll(seriesForLine1, seriesForLine2);
 
