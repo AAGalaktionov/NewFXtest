@@ -56,12 +56,8 @@ public class Controller {
 
 
         });
-        textField1.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
-            textField1.setText("");
-        });
-        textField2.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> {
-            textField2.setText("");
-        });
+        textField1.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> textField1.setText(""));
+        textField2.addEventHandler(MouseEvent.MOUSE_CLICKED, mouseEvent -> textField2.setText(""));
 
 
     }
