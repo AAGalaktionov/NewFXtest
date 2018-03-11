@@ -40,8 +40,8 @@ public class Controller {
             for (int i = 0; i < 11; i++) {
                 Random random = new Random();
                 double rand = random.nextDouble();
-                line1.put(rand * i, rand * i + i + 1);
-                line2.put(rand * i, 2.0 * rand * i + 2);
+                line1.put(i * 1.0, rand * i + i + 1);
+                line2.put(i * 1.0, rand * rand * i + 3);
             }
 
 
