@@ -10,21 +10,29 @@
 
 
 <Pane fx:controller="sample.Controller"
-        maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <Button fx:id="button" layoutX="75.0" layoutY="497.0" mnemonicParsing="false" text="Draw" ></Button>
-      <ToggleButton fx:id="toggleButton1" layoutX="60.0" layoutY="333.0" mnemonicParsing="false" text="analytically" />
-      <ToggleButton fx:id="toggleButton2" layoutX="60.0" layoutY="373.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="78.0" text="numerical" />
-      <ToggleButton fx:id="toggleButton3" layoutX="60.0" layoutY="413.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="78.0" text="air resistance" />
-      <TextField fx:id="textField1" layoutX="60.0" layoutY="255.0" prefHeight="23.0" prefWidth="78.0" text="initial speed" />
-      <TextField fx:id="textField2" layoutX="60.0" layoutY="291.0" prefHeight="23.0" prefWidth="78.0" text="angle" />
-      <LineChart fx:id="lineChart" layoutX="206.0" layoutY="85.0" prefHeight="459.0" prefWidth="669.0" title="График">
-        <xAxis>
-          <CategoryAxis side="BOTTOM" />
-        </xAxis>
-        <yAxis>
-          <NumberAxis side="LEFT" />
-        </yAxis>
-      </LineChart>
-   </children>
+      maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0"
+      prefWidth="900.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+    <children>
+        <Button fx:id="button" layoutX="75.0" layoutY="497.0" mnemonicParsing="false" text="Draw"></Button>
+        <ToggleButton fx:id="toggleButton1" layoutX="60.0" layoutY="333.0" mnemonicParsing="false" text="analytically"/>
+        <ToggleButton fx:id="toggleButton2" layoutX="60.0" layoutY="373.0" mnemonicParsing="false" prefHeight="22.0"
+                      prefWidth="78.0" text="numerical"/>
+        <ToggleButton fx:id="toggleButton3" layoutX="60.0" layoutY="413.0" mnemonicParsing="false" prefHeight="22.0"
+                      prefWidth="78.0" text="air resistance"/>
+        <TextField fx:id="textField1" layoutX="60.0" layoutY="255.0" prefHeight="23.0" prefWidth="78.0"
+                   text="initial speed"/>
+        <TextField fx:id="textField2" layoutX="60.0" layoutY="291.0" prefHeight="23.0" prefWidth="78.0" text="angle"/>
+        <LineChart fx:id="lineChart" layoutX="206.0" layoutY="85.0" prefHeight="459.0" prefWidth="669.0" title="График">
+            <xAxis>
+                <NumberAxis fx:id="xAxis" side="BOTTOM" minorTickVisible="false" autoRanging="false"
+                            forceZeroInRange="true" tickUnit="0.1" label="Hight" upperBound="5"/>
+            </xAxis>
+
+            <yAxis>
+                <NumberAxis fx:id="yAxis" minorTickVisible="false" autoRanging="false"
+                            forceZeroInRange="true" tickUnit="0.1" label="Hight" upperBound="5"/>
+            </yAxis>
+
+        </LineChart>
+    </children>
 </Pane>
