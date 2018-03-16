@@ -25,7 +25,7 @@
         <LineChart fx:id="lineChart" layoutX="206.0" layoutY="85.0" prefHeight="459.0" prefWidth="669.0" title="График">
             <xAxis>
                 <NumberAxis fx:id="xAxis" side="BOTTOM" minorTickVisible="false" autoRanging="false"
-                            forceZeroInRange="true" tickUnit="0.1" label="Hight" upperBound="5"/>
+                            forceZeroInRange="true" tickUnit="0.1" label="Length" upperBound="5"/>
             </xAxis>
 
             <yAxis>
